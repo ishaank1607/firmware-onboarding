@@ -10,7 +10,6 @@ void BMEI2CInterface::update()
     _temperatureC = _bme.readTemperature();
 }
 
-
 float BMEI2CInterface::getTemperature() const 
 {
     return _temperatureC;    

@@ -7,6 +7,7 @@ LEDcontroller ledController(BMEConstants::LED_PIN);
 
 void setup( ) {
     Serial.begin(115200);
+    BMESPIInterfaceInstance::create();
     if ( !BMESPIInterfaceInstance::instance().begin() ) {
         Serial.println("Could not find valid BME280 sensor, check wiring");
     }
